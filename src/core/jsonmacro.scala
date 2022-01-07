@@ -24,8 +24,6 @@ import org.typelevel.jawn.*, ast.*
 import scala.quoted.*
 import scala.collection.mutable as scm
 
-import unsafeExceptions.canThrowAny
-
 object JsonMacro:
   def deriveReader[T: Type](using Quotes): Expr[Json.Reader[T]] =
     import quotes.reflect.*
